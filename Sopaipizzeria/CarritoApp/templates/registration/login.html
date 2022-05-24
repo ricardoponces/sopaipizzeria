@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion Requerido</title>
+    <link rel="stylesheet" href="{% static 'css/sopaipizzeria.css' %}">
+</head>
+<body>
+    <div class="container">
+  
+        <ul class="slider">
+          <li id="slide1">
+            <img src="https://www.recetaslider.cl/wp-content/uploads/2021/06/principal_5d406fb4755b2.jpg"/>
+          </li>
+          <li id="slide2">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/19/76/f0/71/pizze-varie-di-gianni.jpg"/>
+          </li>
+        <ul class="menu">
+          <li>
+            <a href="#slide1">1</a>
+          </li>
+          <li>
+            <a href="#slide2">2</a>
+          </li>
+        </ul>
+        
+      </div>
+    <form method="post">
+    {% csrf_token %}
+        <h1>FAVOR INICIAR SESION PARA ACCEDER AL SITIO</h1>
+        <p>Actualmente no te encuentras logeado!</p>
+        <p>Por favor completa los datos de acceso.</p>
+    <label for="usuario">
+        Usuario
+        <input type="text" name="username">
+    </label>
+    <label for="password">
+        Contraseña
+        <input type="password" name="password">
+    </label>
+    <button type="submit">Iniciar Sesion</button>
+</form>
+
+</body>
+</html>

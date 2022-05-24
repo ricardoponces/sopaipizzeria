@@ -1,0 +1,43 @@
+<div class="alert alert-primary" role="alert">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="row" colspan="3" class="text-center"> CARRITINI DI COMPRINI</th>
+            </tr>
+            <tr>
+                <th scope="col">NOMBRINI</th>
+                <th scope="col">PRECINI</th>
+                <th scope="col">TUTICUANTI</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% if request.session.carrito.items %}
+        {% for key, value in request.session.carrito.items %}
+            <tr>
+                <td>{{value.nombre}}</td>
+                <td>{{value.precio}}</td>
+                <td>{{value.acumulado}}
+                    <a href="{% url 'Agr' value.producto_id%}" class="badge btn btn-dark badge-dark">+</a>
+                    <a href="{% url 'Rtr' value.producto_id%}" class="badge btn btn-dark badge-dark">-</a>
+                </td>
+            </tr>
+        {% endfor %}   
+        {% else %}
+        <tr>
+            <td colspan="3">
+                <div class="alert alert-danger text-center">Sin Productinis</div>
+            </td>
+        </tr> 
+        {% endif %}
+            <tr>
+                <th scope="row">Total:</th>
+                <td colspan="2">$ {{total_carrito}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    </div>
+    <div class="row text-center">
+        <div class="col-6"><a href="{% url 'Lpr' %}" class="btn btn-danger">LIMPIARINI</a></div>
+        <div class="col-6"><a href="#" class="btn btn-success">GUARDARINI</a></div>
+    </div>
