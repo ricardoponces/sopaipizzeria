@@ -1,7 +1,6 @@
-# sopaipizzeria
-Proyecto Sopaipizzeria
-# Bootcamp-awakelab
-## instalacion de recursos
+# Sopaipizzeria
+ 
+## Proyecto | Instalacion de recursos
 ![](https://1.bp.blogspot.com/-EW9IYLNiqDA/Wv4r4sOGveI/AAAAAAAABUg/lL0B1cIEfCkrVROQXiApi92D6brGMLUPQCLcBGAs/s1600/visual-studio-code.jpg)🧑🏼‍💻
 
  # instalación de recursos
